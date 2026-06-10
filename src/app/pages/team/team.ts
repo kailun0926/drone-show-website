@@ -16,10 +16,10 @@ interface Member {
 })
 export class Team {
   protected readonly members: Member[] = [
-    { name: 'Liang-Kai Wang', role: 'Project Manager', icon: '🧭' },
+    { name: 'Liang-Kai Wang', role: 'Project Manager', icon: '🧭', photo: 'josh.jpg' },
     { name: 'Kai-Lun Chen', role: 'Software Engineer', icon: '💻', photo: 'kailun.jpg' },
     { name: 'Chia-Chien Lin', role: 'Cloud Technician', icon: '☁️', photo: 'milu.jpg' },
-    { name: 'Shao-Yu Liu', role: 'Hardware Engineer', icon: '🔧' },
+    { name: 'Shao-Yu Liu', role: 'Hardware Engineer', icon: '🔧', photo: 'ju.jpg' },
   ];
 
   protected readonly contact = { name: '', email: '', message: '' };
