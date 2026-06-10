@@ -1,0 +1,109 @@
+/* 成員網格：Hover 霓虹光暈 */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.member-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(47, 123, 255, 0.18);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 28px rgba(0, 229, 255, 0.35), 0 0 60px rgba(47, 123, 255, 0.15);
+  }
+
+  .avatar {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.15), rgba(47, 123, 255, 0.08));
+    border: 1px solid var(--border-glow);
+
+    &.photo {
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.15rem;
+  }
+
+  .role {
+    margin: 0;
+    color: var(--neon-cyan);
+    font-weight: 600;
+  }
+
+  .role-en {
+    margin: 0.15rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+}
+
+/* 聯絡表單 */
+.contact-title {
+  margin-top: 3.5rem;
+}
+
+.contact-form {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--text-main);
+  }
+
+  input,
+  textarea {
+    background: rgba(6, 10, 20, 0.7);
+    border: 1px solid rgba(47, 123, 255, 0.3);
+    border-radius: 8px;
+    padding: 0.7rem 0.9rem;
+    color: var(--text-main);
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    resize: vertical;
+
+    &:focus {
+      outline: none;
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.25);
+    }
+
+    &::placeholder {
+      color: rgba(147, 163, 194, 0.55);
+    }
+  }
+
+  button {
+    align-self: flex-start;
+  }
+}
+
+.success {
+  max-width: 560px;
+  color: var(--text-main);
+  font-weight: 600;
+}

@@ -1,0 +1,56 @@
+<!-- Hero: full-bleed dark background + animated grid -->
+<section class="hero">
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="drones" aria-hidden="true">
+    @for (d of [1, 2, 3, 4, 5, 6, 7, 8]; track d) {
+      <span class="drone-dot" [style.--i]="d"></span>
+    }
+  </div>
+
+  <div class="hero-content">
+    <span class="tag">IoT Edge & Fog Computing</span>
+    <h1>Drone Show <span class="gradient-text">Control System</span></h1>
+    <p class="hero-desc">
+      Built on IoT edge and fog computing, combining ESP32 with multiple sensors to deliver a
+      low-latency, scalable drone swarm performance platform — the next generation of light shows
+      in the night sky.
+    </p>
+    <div class="hero-actions">
+      <a routerLink="/concept" class="btn-neon">Explore the Architecture</a>
+      <a routerLink="/team" class="btn-ghost">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Business value -->
+<section class="page values">
+  <h2 class="section-title">Why Drone Shows?</h2>
+  <p class="section-subtitle">Our business value</p>
+
+  <div class="value-grid">
+    <div class="card">
+      <div class="icon">🌱</div>
+      <h3>Pollution-Free Smart City Solution</h3>
+      <p>
+        Compared with traditional fireworks, drone shows produce no air pollution, smoke, or blast
+        noise — an eco-friendly, reusable performance solution for smart cities.
+      </p>
+    </div>
+    <div class="card">
+      <div class="icon">✨</div>
+      <h3>Highly Dynamic Visuals</h3>
+      <p>
+        Swarming drones can morph formations, colors, and animations in real time, delivering far
+        more dynamic presentations with endlessly customizable show content.
+      </p>
+    </div>
+    <div class="card">
+      <div class="icon">🤖</div>
+      <h3>Swarm Robotics Showcase</h3>
+      <p>
+        Distributed nodes working in concert demonstrate advanced swarm robotics capability — a
+        technology that extends to logistics, inspection, and disaster response.
+      </p>
+    </div>
+  </div>
+</section>

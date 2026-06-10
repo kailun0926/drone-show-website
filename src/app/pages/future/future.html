@@ -1,0 +1,25 @@
+<section class="page">
+  <h2 class="section-title">Future Outlook</h2>
+  <p class="section-subtitle">From a show platform to an autonomous intelligent swarm system</p>
+
+  <div class="timeline">
+    @for (m of milestones; track m.phase) {
+      <div class="timeline-item">
+        <div class="node-col">
+          <span class="glow-node"></span>
+          <span class="line"></span>
+        </div>
+        <article class="card">
+          <span class="tag">{{ m.phase }}</span>
+          <h3>{{ m.title }}</h3>
+          <p>{{ m.description }}</p>
+          <div class="tags">
+            @for (t of m.tags; track t) {
+              <span class="chip">{{ t }}</span>
+            }
+          </div>
+        </article>
+      </div>
+    }
+  </div>
+</section>

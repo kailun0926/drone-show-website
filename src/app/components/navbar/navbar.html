@@ -1,0 +1,23 @@
+<header class="navbar">
+  <a routerLink="/" class="brand" (click)="closeMenu()">
+    <span class="brand-icon">✦</span>
+    <span class="brand-text">Drone<span class="accent">Show</span></span>
+  </a>
+
+  <button class="hamburger" type="button" aria-label="Toggle menu" (click)="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav-links" [class.open]="menuOpen()">
+    @for (link of links; track link.path) {
+      <a
+        [routerLink]="link.path"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: link.exact }"
+        (click)="closeMenu()"
+      >
+        {{ link.label }}
+      </a>
+    }
+  </nav>
+</header>

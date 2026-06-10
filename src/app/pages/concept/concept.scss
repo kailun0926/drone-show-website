@@ -1,0 +1,110 @@
+/* 架構流程示意 */
+.arch-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+
+  .node {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 700;
+    color: var(--text-main);
+    border: 1px solid var(--border-glow);
+    background: var(--bg-card);
+    box-shadow: 0 0 16px rgba(0, 229, 255, 0.15);
+  }
+
+  .link {
+    color: var(--neon-cyan);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+}
+
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.level-card {
+  header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+
+    .icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    h3 {
+      margin: 0.4rem 0 0;
+      font-size: 1.1rem;
+    }
+  }
+
+  .desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+
+    li {
+      margin-bottom: 0.4rem;
+
+      &::marker {
+        color: var(--neon-cyan);
+      }
+    }
+  }
+}
+
+.gallery-title {
+  margin-top: 3.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+
+  figure {
+    margin: 0;
+    text-align: center;
+
+    .placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      border: 1px dashed rgba(0, 229, 255, 0.35);
+      border-radius: 10px;
+      color: var(--text-muted);
+      padding: 1rem;
+    }
+
+    img {
+      width: 100%;
+      height: 280px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    figcaption {
+      margin-top: 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  }
+}

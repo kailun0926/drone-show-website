@@ -1,0 +1,46 @@
+<section class="page">
+  <h2 class="section-title">Concept & Technology</h2>
+  <p class="section-subtitle">How we built it — a 3-level Edge / Fog / Cloud architecture</p>
+
+  <div class="arch-flow" aria-hidden="true">
+    <span class="node">Edge</span>
+    <span class="link">ESP-NOW ⟶</span>
+    <span class="node">Fog</span>
+    <span class="link">MQTT ⟶</span>
+    <span class="node">Cloud</span>
+  </div>
+
+  <div class="level-grid">
+    @for (lv of levels; track lv.level) {
+      <article class="card level-card">
+        <header>
+          <span class="icon">{{ lv.icon }}</span>
+          <div>
+            <span class="tag">{{ lv.level }} · {{ lv.chip }}</span>
+            <h3>{{ lv.name }}</h3>
+          </div>
+        </header>
+        <p class="desc">{{ lv.description }}</p>
+        <ul>
+          @for (point of lv.points; track point) {
+            <li>{{ point }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+
+  <!-- Slides & hardware photos: drop images into public/ and replace the src -->
+  <h2 class="section-title gallery-title">Showcase</h2>
+  <p class="section-subtitle">Presentation slides and hardware photos</p>
+  <div class="gallery">
+    <figure class="card">
+      <img src="flow.png" alt="System architecture flow diagram" />
+      <figcaption>System architecture slides</figcaption>
+    </figure>
+    <figure class="card">
+      <img src="hardware.jpg" alt="ESP32 drone node hardware" />
+      <figcaption>ESP32 drone node hardware</figcaption>
+    </figure>
+  </div>
+</section>

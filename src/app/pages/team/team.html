@@ -1,0 +1,55 @@
+<section class="page">
+  <h2 class="section-title">Our Team</h2>
+  <p class="section-subtitle">Team & Contact — the people behind the system</p>
+
+  <div class="team-grid">
+    @for (m of members; track m.name) {
+      <div class="member-card">
+        @if (m.photo) {
+          <img class="avatar photo" [src]="m.photo" [alt]="m.name" />
+        } @else {
+          <div class="avatar">{{ m.icon }}</div>
+        }
+        <h3>{{ m.name }}</h3>
+        <p class="role">{{ m.role }}</p>
+      </div>
+    }
+  </div>
+
+  <h2 class="section-title contact-title">Contact Us</h2>
+  <p class="section-subtitle">
+    Interested in drone shows or technical collaboration? Drop us a message!
+  </p>
+
+  @if (submitted()) {
+    <div class="card success">✅ Thanks for reaching out — we'll get back to you soon!</div>
+  } @else {
+    <form class="card contact-form" (ngSubmit)="submit()">
+      <label>
+        Name
+        <input type="text" name="name" [(ngModel)]="contact.name" required placeholder="Your name" />
+      </label>
+      <label>
+        Email
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="contact.email"
+          required
+          placeholder="you@example.com"
+        />
+      </label>
+      <label>
+        Message
+        <textarea
+          name="message"
+          rows="5"
+          [(ngModel)]="contact.message"
+          required
+          placeholder="What would you like to tell us…"
+        ></textarea>
+      </label>
+      <button type="submit" class="btn-neon">Send Message</button>
+    </form>
+  }
+</section>
