@@ -235,22 +235,6 @@ npm start        # dev server → http://localhost:4200
 
 ---
 
-## 🛠️ Engineering Notes
-
-A few non-obvious bugs were found and fixed during development — good examples of
-embedded-systems gotchas:
-
-- **Radio-channel conflict:** the aggregator's Wi-Fi connection silently moved
-  its radio off the ESP-NOW channel, deafening it to the mesh. Resolved by
-  decoupling the database link onto USB.
-- **One-shot map mirror:** a coordinate flip was guarded so it only applied once,
-  but the map is rebuilt every solve cycle — so the fix had to reapply each cycle.
-- **Cross-task data race:** anchor zone arrays were written from the ESP-NOW
-  receive callback while the solver read them. Fixed with a queue hand-off so all
-  state changes happen on one task.
-
----
-
 ## 📜 Notes & Limitations
 
 - The dashboard uses Flask's development server — ideal for local/LAN use. A
