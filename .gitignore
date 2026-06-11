@@ -43,3 +43,10 @@ Thumbs.db
 
 # Local-only files
 AIOT.pdf
+
+# Claude Code local config
+.claude/
+
+# Python bytecode
+__pycache__/
+*.pyc
