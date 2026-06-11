@@ -138,6 +138,8 @@ All commands below are run inside `cloud-and-fog-final/`.
 - (For real hardware) Arduino IDE / `arduino-cli` with the ESP32 core and the
   Adafruit BMP085, MPU6500_WE, Adafruit HMC5883, and Adafruit NeoPixel libraries.
 
+![System structure](docs/structure.png)
+
 ### 2. Install
 ```bash
 cd cloud-and-fog-final
